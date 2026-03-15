@@ -16,7 +16,7 @@ def main(data_dir, alignment, save_dir, verbose_flag):
 	from tqdm import tqdm
 	from constant import DataConst as const
 
-	alignment_keys = pf.read_ids(paf)
+	alignment_keys = pf.read_ids(alignment)
 
 	fnames = list()
 	for dir in data_dir:
