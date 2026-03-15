@@ -30,7 +30,7 @@ def main():
 	parser_pr.add_argument("--label0", '-0', required = True)
 	parser_pr.add_argument("--label1", '-1', required = True)
 	parser_pr.add_argument("--output", '-o', required = True)
-	parser_pr.add_argument("--verbose", '-v', required = True)
+	parser_pr.add_argument("--verbose", '-v', action = "store_true")
 	parser_pr.set_defaults(handler = pr.run)
 
 ## Training DNN
