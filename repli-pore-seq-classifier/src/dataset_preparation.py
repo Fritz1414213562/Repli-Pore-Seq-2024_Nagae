@@ -4,6 +4,7 @@ import sys
 from event_detection import detect_events
 from signal_reader import read_signal
 from paf_reader import label_reads
+import util
 from util import normalization
 from constant import DataConst
 from tqdm import tqdm
@@ -39,7 +40,7 @@ def main(fast5dirs, paf0, paf1, out, verbose_flag):
 		print("Read Fast5 ....")
 	fnames = list()
 	for fast5dir in fast5dirs:
-		fnames += util.signalfile_in(dir)
+		fnames += util.signalfile_in(fast5dir)
 	signals = dict()
 	for fname in fnames:
 		signals.update(read_signal(fname))
